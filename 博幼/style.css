@@ -1,0 +1,87 @@
+/* 1. 設定整個網頁的背景色與文字置中 */
+body {
+  font-family: "Microsoft JhengHei", sans-serif;
+  background-color: #fdf8f2; /* 溫暖的米黃色背景 */
+  color: #333333;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: #e67e22; /* 橘色主標題 */
+}
+
+/* 2. 讓 <main> 裡面的卡片變成「橫向並排」 */
+main {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  gap: 20px;               /* 卡片之間的間距 */
+  margin-top: 30px;
+  flex-wrap: wrap;         /* 螢幕太窄時自動換行 */
+}
+
+/* 3. 幫每張 .card 畫出白色方框、圓角與陰影 */
+.card {
+  background-color: white;
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  width: 150px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 2.5rem;
+  color: #d35400;
+  margin: 0 0 10px 0;
+}
+/* 4. Emoji 插圖與控制按鈕樣式 */
+.emoji-pic {
+  font-size: 4rem; /* 讓水果、動物圖案變得很大很清楚 */
+  margin: 10px 0;
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.controls button:hover {
+  background-color: #d35400;
+}
+
+/* 按下去瞬間的縮放回饋感 */
+.controls button:active {
+  transform: scale(0.95);
+}
+
+/* 讓「再聽一次」按鈕用綠色區分，更顯眼 */
+#speak-btn {
+  background-color: #27ae60;
+}
+
+#speak-btn:hover {
+  background-color: #219150;
+}
+/* 4. 純英文字母模式：超大字體設定 */
+.pure-letter {
+  font-size: 6.5rem !important;
+  margin: 40px 0 !important;
+  letter-spacing: 12px; /* 讓大寫 A 和小寫 a 之間稍微拉開距離 */
+}
